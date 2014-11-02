@@ -1,4 +1,4 @@
-dart-k
+DART-k
 ======
 
-Diversity-aware reverse top-k queries
+**C Slot Project** -- Diversity-Aware Reverse Top-_k_ Queries
