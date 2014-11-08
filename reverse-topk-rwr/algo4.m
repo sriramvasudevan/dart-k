@@ -6,15 +6,15 @@ V = (1:size(A,1));
 V2 = (1:size(A,1));
 V2(H) = 0;
 V2 = nonzeros(V2);
-tolerance = 1e-10;
+%tolerance = 1e-10;
 for i=1:size(V,2)
     %disp(V(i));
-    %pq(V(i)) = floor(pq(V(i))*100000)/100000;
-    %Pcap(k,V(i)) = floor(Pcap(k,V(i))*100000)/100000;
+    pq(V(i)) = floor(pq(V(i))*100000)/100000;
+    Pcap(k,V(i)) = floor(Pcap(k,V(i))*100000)/100000;
     %disp(pq(V(i)));
     %disp(Pcap(k,V(i)));
-    while (pq(V(i)) >= Pcap(k,V(i))-tolerance)
-    %while (pq(V(i)) >= Pcap(k,V(i)))
+    %while (pq(V(i)) >= Pcap(k,V(i))-tolerance)
+    while (pq(V(i)) >= Pcap(k,V(i)))
         if(norm(R(:,V(i)),1)==0)
             C = union(C, V(i));
             break;

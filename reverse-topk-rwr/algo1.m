@@ -15,6 +15,7 @@ for i=1:size(H,2)
     end
 end
 
+disp('Hubs done');
 V = (1:size(A,1));
 V(H) = 0;
 V = nonzeros(V);
